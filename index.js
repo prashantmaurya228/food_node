@@ -2,7 +2,8 @@ const express = require("express");
 const app = express();
 const db = require("./db");
 const bodyParser = require("body-parser");
-
+require("dotenv").config();
+const PORT = process.env.PORT || 4000;
 const ItemRoutes = require("./routes/ItemRoutes");
 app.use(bodyParser.json()); //req.body
 
